@@ -1,4 +1,5 @@
-/*Desired result the name or (argument) that is passed into the nameFilter 
+/*Desired result the name or (argument) that is passed 
+into the nameFilter 
  function when invoked will be filtered out.
  IE  nameFilter("Roger") would print
  ["John", "Betty"]

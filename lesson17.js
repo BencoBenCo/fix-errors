@@ -7,18 +7,27 @@ Expected  output in console:
         This Ran 1 
         ['John', 'Roger']
 */
-var people = [
-    { name: "John", age: 55 },
-    { name: "Roger", age: 44 },
-    { name: "Betty", age: 37 }
-    ]
+var people = [{
+        name: "John",
+        age: 55
+    },
+    {
+        name: "Roger",
+        age: 44
+    },
+    {
+        name: "Betty",
+        age: 37
+    }
+]
 
 
-var nameFilter = function(filteredName, anonymousFunction) {
+var nameFilter = function (filteredName, anonymousFunction) {
     var results = []
     for (var i = 0; i < people.length; i++) {
         let currentName = people[i].name
         if (currentName != filteredName) {
+            anonymousFunction(i)
             results.push(currentName)
 
         }
@@ -27,7 +36,18 @@ var nameFilter = function(filteredName, anonymousFunction) {
     return results
 }
 
-var filteredNames = nameFilter("Betty", function(name) {
-    console.log("This Ran")
-})
+function foo() {}
+
+
+const myFunction = function (x) {
+    return x * 2
+}
+let myArrow = x => x * 2
+
+
+let mars = new Planet(500)
+
+var filteredNames = nameFilter("Betty", (f => console.log(`This Ran ${f}`)))
+
+
 console.log(filteredNames)

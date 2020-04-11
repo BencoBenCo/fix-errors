@@ -7,10 +7,10 @@ var people = [
     ]
 
 var nameFilter = function(filteredName) {
-    var results = []
+    var results = [];
     for (var i = 0; i < people.length; i++) {
         let name = people[i].name
-        if (name != filteredName) {
+        if ( name != filteredName) {
             results.push(name)
         }
     }
@@ -20,5 +20,6 @@ var selectName = function() {
     var currentName = "Betty";
     return currentName
 }
-var filteredNames = nameFilter(selectName())
+
+var filteredNames = nameFilter( selectName()) \\ "Betty"
 console.log(filteredNames)
